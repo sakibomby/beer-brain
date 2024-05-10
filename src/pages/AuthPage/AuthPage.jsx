@@ -11,7 +11,7 @@ export default function AuthPage({ setUser }) {
 
     return (
         <main>
-            <h1>Auth Page</h1>
+            <h1>Welcome To BeerBrain!</h1>
            {showSignUp ?  <SignUpForm setUser={setUser} /> : <LoginForm setUser={setUser} />}
             <button onClick={handleChange}>
             {showSignUp ? 'Login' : 'Sign Up'}
