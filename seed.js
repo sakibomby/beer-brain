@@ -1,12 +1,12 @@
 require('dotenv').config();
 require('./config/database');
 
-const Category = require('./models/category');
-const Item = require('./models/item');
+const Style = require('./models/style');
+const Item = require('./models/beer');
 
 (async function() {
-  await Category.deleteMany({});
-  const categories = await Category.create([
+  await Style.deleteMany({});
+  const categories = await Style.create([
     {style: 'Ale', sortOrder: 10},
     {style: 'Brown Ale', sortOrder: 20},
     {style: 'Golden Ale', sortOrder: 30},

@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
+import BeerListPage from  '../BeerListPage/BeerListPage';
+import MyBeerListPage from  '../MyBeerListPage/MyBeerListPage';
+import NewBeerPage from '../NewBeerPage/NewBeerPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
 
@@ -15,16 +18,17 @@ export default function App() {
       <> 
         <NavBar user={user} setUser={setUser}/>
         <Routes>
-          {/* Route components in here */}
-          <Route />
+          <Route path="/beers" element={<BeerListPage />} />
+          <Route path="/mybeerlist" element={<MyBeerListPage />} />
+          <Route path="/new-beer" element={<NewBeerPage />} />
+          <Route path="/*" element={<Navigate to="/beers" />} />
           <Route />
         </Routes>
       </> 
         : 
         <Routes>
-        {/* Route components in here */}
-        <Route path="/" element={<HomePage setUser={setUser} />} />
-        <Route path="/auth" element={<AuthPage setUser={setUser} />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/auth" element={<AuthPage setUser={setUser} />} />
       </Routes>
         
       }

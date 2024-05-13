@@ -8,7 +8,7 @@ export default function HomePage({ setUser }) {
             <h2>To</h2>
             <h1>BeerBrain!</h1>
             <Link to="/auth">
-            <button onClick={ <AuthPage setUser={setUser}/> }>
+            <button>
             <p>Login/SignUp</p>
             </button>
             </Link>
