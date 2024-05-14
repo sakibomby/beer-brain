@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import * as beersAPI from '../../utilities/beers-api';
 import NewBeerForm from '../../components/NewBeerForm/NewBeerForm';
 

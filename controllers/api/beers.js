@@ -13,8 +13,8 @@ async function create(req, res) {
 }
 
 async function index(req, res) {
-  const beers = await Beer.find({}).sort('name').populate('category').exec();
-  beers.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
+  const beers = await Beer.find({}).sort('name').populate('style').exec();
+  beers.sort((a, b) => a.style.sortOrder - b.style.sortOrder);
   res.json(beers);
 }
 

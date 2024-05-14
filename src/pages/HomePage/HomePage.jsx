@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import AuthPage from '../AuthPage/AuthPage';
 
 export default function HomePage({ setUser }) {
     return (

@@ -7,6 +7,6 @@ router.get('/', beersCtrl.index);
 // GET /api/beers/:id
 router.get('/:id', beersCtrl.show);
 // POST /api/beers
-router.post('/', ensureLoggedIn, beersCtrl.create);
+router.post('/', beersCtrl.create);
 
 module.exports = router;

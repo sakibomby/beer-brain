@@ -41,19 +41,19 @@ function handleChange(evt) {
                     placeholder="Style"
                     required
                 >
-                    <option value="categories[0]">Ale</option>
-                    <option value="categories[1]">Brown Ale</option>
-                    <option value="categories[2]">Golden Ale</option>
-                    <option value="categories[3]">IPA</option>
-                    <option value="categories[4]">Lager</option>
-                    <option value="categories[5]">Pale Ale</option>
-                    <option value="categories[6]">Porter</option>
-                    <option value="categories[7]">Pilsner</option>
-                    <option value="categories[8]">Sour</option>
-                    <option value="categories[9]">Stout</option>
-                    <option value="categories[10]">Strong Ale</option>
-                    <option value="categories[11]">Trappist</option>
-                    <option value="categories[12]">Wheat</option>
+                    <option value="styles[0]">Ale</option>
+                    <option value="styles[1]">Brown Ale</option>
+                    <option value="styles[2]">Golden Ale</option>
+                    <option value="styles[3]">IPA</option>
+                    <option value="styles[4]">Lager</option>
+                    <option value="styles[5]">Pale Ale</option>
+                    <option value="styles[6]">Porter</option>
+                    <option value="styles[7]">Pilsner</option>
+                    <option value="styles[8]">Sour</option>
+                    <option value="styles[9]">Stout</option>
+                    <option value="styles[10]">Strong Ale</option>
+                    <option value="styles[11]">Trappist</option>
+                    <option value="styles[12]">Wheat</option>
                 </select>
                 <input
                     name="tastingNotes"

@@ -1,0 +1,15 @@
+.BeerListPage {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3.5fr;
+  grid-template-rows: 1fr;
+
+}
+
+.BeerListPage div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
