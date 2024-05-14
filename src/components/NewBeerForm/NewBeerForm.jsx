@@ -11,11 +11,11 @@ export default function NewBeerForm({ addBeer }) {
     function handleSubmit(evt) {
         evt.preventDefault();
         addBeer(newBeer);
-      }
+    }
 
-function handleChange(evt) {
-    setNewBeer({ ...newBeer, [evt.target.name]: evt.target.value });
-  }
+    function handleChange(evt) {
+        setNewBeer({ ...newBeer, [evt.target.name]: evt.target.value });
+    }
 
     return (
         <>

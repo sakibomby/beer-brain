@@ -19,7 +19,7 @@ export default function App() {
         <NavBar user={user} setUser={setUser}/>
         <Routes>
           <Route path="/beers" element={<BeerListPage />} />
-          <Route path="/mybeerlist" element={<MyBeerListPage />} />
+          <Route path="/mybeerlist" element={<MyBeerListPage user={user} setUser={setUser}/>} />
           <Route path="/new-beer" element={<NewBeerPage />} />
           <Route path="/*" element={<Navigate to="/beers" />} />
           <Route />

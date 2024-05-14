@@ -5,8 +5,10 @@ const beersCtrl = require('../../controllers/api/beers');
 // GET /api/beers
 router.get('/', beersCtrl.index);
 // GET /api/beers/:id
-router.get('/:id', beersCtrl.show);
+router.get('/myId', beersCtrl.getMyBeers);
 // POST /api/beers
 router.post('/', beersCtrl.create);
+
+router.post('/:id', beersCtrl.addToList);
 
 module.exports = router;
