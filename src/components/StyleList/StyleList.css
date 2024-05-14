@@ -14,12 +14,12 @@
     
 .StyleList ul:hover:not(.active) {
   cursor: pointer;
-  background-color: var(--orange);
+  background-color: var(--color-5);
   color: var(--white);
 }
 
 .StyleList ul.active {
   color: var(--text-dark);
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--color-1);
+  border: .1vmin solid var(--color-3);
 }

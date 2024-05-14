@@ -10,7 +10,10 @@ export default function BeerList({ beersList }) {
     );
     return (
       <main className="BeerList">
+        <div>
+
         {beers}
+        </div>
       </main>
     );
   }

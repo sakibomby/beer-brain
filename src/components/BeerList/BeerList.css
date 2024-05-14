@@ -1,8 +1,22 @@
 .BeerList {
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--color-1);
+  border: .1vmin solid var(--color-3);
   border-radius: 2vmin;
-  margin: 3vmin 0;
-  padding: 3vmin;
+  margin: 3vmin 2vmin;
+  padding: 5vmin;
   overflow-y: scroll;
+}
+
+.BeerList div:hover:not(.active) {
+  cursor: pointer;
+  background-color: var(--color-5);
+  color: var(--white);
+  border-radius: 2vmin;
+}
+
+.BeerList div.active {
+  color: var(--text-dark);
+  background-color: var(--color-1);
+  border: .1vmin solid var(--color-2);
+  border-radius: 2vmin;
 }

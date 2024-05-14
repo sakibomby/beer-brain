@@ -11,7 +11,7 @@ export default function StyleList({ styles, activeStyle, setActiveStyle }) {
       </ul>
     );
     return (
-      <ul className="StyleLis">
+      <ul className="StyleList">
         {stylesList}
       </ul>
     );
