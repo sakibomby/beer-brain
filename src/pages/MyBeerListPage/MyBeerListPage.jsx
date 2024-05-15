@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import * as beersApi from '../../utilities/beers-api';
 import BeerCard from '../../components/BeerCard/BeerCard';
+import { Link } from "react-router-dom";
+import './MyBeerListPage.css';
 
 export default function MyBeerListPage() {
     const [myBeers, setMyBeers] = useState([]);
@@ -21,14 +23,17 @@ export default function MyBeerListPage() {
         beer={b} 
         handleRemoveBeerFromMyList={handleRemoveBeerFromMyList}
         key={b._id} 
-    />)
+        />
+    )
 
     return (
-        <main>
+        <main className="MyBeerListPage">
             <h1>My Beer List</h1>
+           <Link to="/flashcards">
+           <button>Review Cards</button>
+           </Link>
             <ul>
                 <div>{beerCards}</div>
-                {/* <div>{myBeers.map((b, idx)=> <p>{b.name}</p>)}</div> */}
             </ul>
         </main>
     )

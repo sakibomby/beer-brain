@@ -1,8 +1,4 @@
-import * as beersApi from '../../utilities/beers-api';
-
 export default function BeerCard({ beer, handleRemoveBeerFromMyList }) {
-
-
     return (
     <ul>
       <div className="beercard">

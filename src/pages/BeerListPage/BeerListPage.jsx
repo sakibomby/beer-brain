@@ -5,7 +5,7 @@ import StyleList from "../../components/StyleList/StyleList";
 import './BeerListPage.css';
 import BeerList from "../../components/BeerList/BeerList";
 
-export default function BeerListPage() {
+export default function BeerListPage({user}) {
     const [beersList, setBeersList] = useState([]);
     const [activeStyle, setActiveStyle] = useState('');
     const stylesRef = useRef([]);
@@ -22,6 +22,7 @@ export default function BeerListPage() {
 
     return (
         <main className="BeerListPage">
+            <h2>Welcome! {user.name}</h2>
             <h1>Beers List</h1>
             <aside>
                 <StyleList
@@ -35,7 +36,7 @@ export default function BeerListPage() {
                     </button>
                 </Link>
             </aside>
-            <p>click on beer to add to your list</p>
+            <p>Click On Beer To Add To Your List</p>
             <BeerList
         beersList={beersList.filter(beer => beer.style.name === activeStyle)}
       />
