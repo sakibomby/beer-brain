@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export default function NewBeerForm({ addBeer }) {
+export default function NewBeerForm({ addBeer, styles }) {
     const [newBeer, setNewBeer] = useState({
         name: '',
         imgSrc: '',
@@ -8,7 +8,11 @@ export default function NewBeerForm({ addBeer }) {
         tastingNotes: '',
     });
 
-    function handleSubmit(evt) {
+    useEffect(() => {
+        if (styles.length) newBeer.style = styles[0]._id;
+    }, [styles])
+
+    function handleAddBeer(evt) {
         evt.preventDefault();
         addBeer(newBeer);
     }
@@ -17,9 +21,11 @@ export default function NewBeerForm({ addBeer }) {
         setNewBeer({ ...newBeer, [evt.target.name]: evt.target.value });
     }
 
+    const styleOptions = styles.map((s) => <option value={s._id} key={s._id}>{s.name}</option>);
+    
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleAddBeer}>
                 <input
                     name="name"
                     value={newBeer.name}
@@ -41,19 +47,7 @@ export default function NewBeerForm({ addBeer }) {
                     placeholder="Style"
                     required
                 >
-                    <option value="styles[0]">Ale</option>
-                    <option value="styles[1]">Brown Ale</option>
-                    <option value="styles[2]">Golden Ale</option>
-                    <option value="styles[3]">IPA</option>
-                    <option value="styles[4]">Lager</option>
-                    <option value="styles[5]">Pale Ale</option>
-                    <option value="styles[6]">Porter</option>
-                    <option value="styles[7]">Pilsner</option>
-                    <option value="styles[8]">Sour</option>
-                    <option value="styles[9]">Stout</option>
-                    <option value="styles[10]">Strong Ale</option>
-                    <option value="styles[11]">Trappist</option>
-                    <option value="styles[12]">Wheat</option>
+                    {styleOptions}
                 </select>
                 <input
                     name="tastingNotes"

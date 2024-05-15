@@ -5,8 +5,15 @@ module.exports = {
   show,
   create,
   addToList,
-  getMyBeers
+  getMyBeers,
+  deleteOneBeer
 };
+
+async function deleteOneBeer(req, res) {
+  const beer = await Beer.findByIdAndRemove({ users: req.user._id });
+  res.json(beer);
+}
+
 
 async function getMyBeers(req, res) {
   const beers = await Beer.find({users: req.user._id});
@@ -23,8 +30,15 @@ await beer.save();
 
 async function create(req, res) {
   req.body.user = req.user._id;
-  const beer = await Beer.create(req.body);
-  res.json(beer);
+  req.body.users = [req.user._id];
+  console.log(req.body);
+  try {
+    const beer = await Beer.create(req.body);
+    res.json(beer);
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+  }
 }
 
 async function index(req, res) {

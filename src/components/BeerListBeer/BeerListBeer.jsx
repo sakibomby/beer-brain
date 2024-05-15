@@ -1,6 +1,5 @@
 import * as beersApi from '../../utilities/beers-api';
 import './BeerListBeer.css';
-import MyBeerListPage from '../../pages/MyBeerListPage/MyBeerListPage';
 
 export default function BeerListBeer({ beer }) {
   async function handleAddBeerToList() {

@@ -7,7 +7,6 @@ export default function MyBeerListPage() {
     useEffect(() => {
         async function getBeers() {
             const beers = await beersApi.getAllMyBeers();
-            console.log(beers);
             setMyBeers(beers);
         }
         getBeers();

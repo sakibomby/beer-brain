@@ -1,11 +1,18 @@
+import * as beersApi from '../../utilities/beers-api';
+
 export default function BeerCard({ beer }) {
-  return (
+  async function handleDelete () {
+    const deleteFromBeerList = await beersApi.deleteMyBeer(beer);
+  }
+
+    return (
     <ul>
       <div className="beercard">
         <img src={beer.imgSrc} alt='' width={200} height={200}/>
         <label>Name: {beer.name}</label>
         <label>Style: {beer.style.name}</label>
         <label>Tasting Notes: {beer.tastingNotes}</label>
+        <span onClick={handleDelete}>delete</span>
       </div>
     </ul>
   );

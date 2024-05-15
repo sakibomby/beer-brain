@@ -6,9 +6,13 @@ export async function getAll() {
 }
 
 export function add(beerData) {
-  return sendRequest(`${BASE_URL}/${beerData._id}`, 'POST');
+  return sendRequest(BASE_URL, 'POST', beerData);
 }
 
 export async function getAllMyBeers() {
   return sendRequest(`${BASE_URL}/myId`);
+}
+
+export async function deleteMyBeer() {
+  return sendRequest(`${BASE_URL}/myId`, 'DELETE')
 }
