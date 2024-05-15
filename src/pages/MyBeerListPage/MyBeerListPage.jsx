@@ -23,13 +23,13 @@ export default function MyBeerListPage() {
         beer={b} 
         handleRemoveBeerFromMyList={handleRemoveBeerFromMyList}
         key={b._id} 
-        />
+        /> 
     )
 
     return (
         <main className="MyBeerListPage">
             <h1>My Beer List</h1>
-           <Link to="/flashcards">
+           <Link to="/flashcards" >
            <button>Review Cards</button>
            </Link>
             <ul>
