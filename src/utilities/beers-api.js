@@ -5,8 +5,12 @@ export async function getAll() {
   return sendRequest(BASE_URL);
 }
 
-export function add(beerData) {
-  return sendRequest(BASE_URL, 'POST', beerData);
+export function addToMyList(beerId) {
+  return sendRequest(`${BASE_URL}/${beerId}/my-list`, 'PUT');
+}
+
+export function add(beer) {
+  return sendRequest(BASE_URL, 'POST', beer);
 }
 
 export async function getAllMyBeers() {

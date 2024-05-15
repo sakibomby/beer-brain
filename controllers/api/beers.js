@@ -25,10 +25,11 @@ async function getMyBeers(req, res) {
 
 async function addToList(req, res ) {
 const beer = await Beer.findById(req.params.id);
-if (!beer.users.includes(req.user._id)) {
-  beer.users.push(req.user._id)
-}
-await beer.save();
+  if (!beer.users.some((u) => u.equals(req.user._id))) {
+    beer.users.push(req.user._id)
+  }
+  await beer.save();
+  res.json(beer);
 }
 
 async function create(req, res) {

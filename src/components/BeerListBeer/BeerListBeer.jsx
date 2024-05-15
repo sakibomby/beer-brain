@@ -1,10 +1,15 @@
+import {useState} from 'react';
 import * as beersApi from '../../utilities/beers-api';
 import './BeerListBeer.css';
 
 export default function BeerListBeer({ beer }) {
+  const [msg, setMsg] = useState('');
+
   async function handleAddBeerToList() {
-    const addToBeerList = await beersApi.add(beer);
+    await beersApi.addToMyList(beer._id);
+    setMsg('Beer Added to Your List!');
   }
+
   
   return (
       <div className="BeerListBeer" onClick={handleAddBeerToList} >
@@ -12,6 +17,7 @@ export default function BeerListBeer({ beer }) {
         <img src={beer.imgSrc} alt='' width={200} height={200}/>
         <label>Style: {beer.style.name}</label>
         <label>Tasting Notes: {beer.tastingNotes}</label>
+        <p>&nbsp;{msg}</p>
       </div>
     );
   }
