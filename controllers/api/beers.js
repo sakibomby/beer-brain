@@ -19,7 +19,7 @@ async function removeMyBeer(req, res) {
 
 
 async function getMyBeers(req, res) {
-  const beers = await Beer.find({users: req.user._id});
+  const beers = await Beer.find({users: req.user._id}).populate('style');
   res.json(beers);
 }
 
