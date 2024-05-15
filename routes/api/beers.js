@@ -13,6 +13,6 @@ router.post('/', beersCtrl.create);
 // POST /api/beers/:id
 router.post('/:id', beersCtrl.addToList);
 //DELETE /api/beer/:id
-router.delete('/myId', beersCtrl.deleteOneBeer)
+router.delete('/:id', beersCtrl.removeMyBeer)
 
 module.exports = router;

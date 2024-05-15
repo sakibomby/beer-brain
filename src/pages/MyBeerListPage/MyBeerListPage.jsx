@@ -10,14 +10,24 @@ export default function MyBeerListPage() {
             setMyBeers(beers);
         }
         getBeers();
-    } , [])
-    const beerCard = myBeers.map((b, idx) => <BeerCard beer={b} key={idx} />)
+    } , []);
+
+    async function handleRemoveBeerFromMyList(beerId) {
+        const updatedBeerList = await beersApi.removeMyBeer(beerId);
+        setMyBeers(updatedBeerList);
+    }
+
+    const beerCards = myBeers.map((b) => <BeerCard 
+        beer={b} 
+        handleRemoveBeerFromMyList={handleRemoveBeerFromMyList}
+        key={b._id} 
+    />)
 
     return (
         <main>
             <h1>My Beer List</h1>
             <ul>
-                <div>{beerCard}</div>
+                <div>{beerCards}</div>
                 {/* <div>{myBeers.map((b, idx)=> <p>{b.name}</p>)}</div> */}
             </ul>
         </main>

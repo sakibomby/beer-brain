@@ -1,9 +1,7 @@
 import * as beersApi from '../../utilities/beers-api';
 
-export default function BeerCard({ beer }) {
-  async function handleDelete () {
-    const deleteFromBeerList = await beersApi.deleteMyBeer(beer);
-  }
+export default function BeerCard({ beer, handleRemoveBeerFromMyList }) {
+
 
     return (
     <ul>
@@ -12,7 +10,7 @@ export default function BeerCard({ beer }) {
         <label>Name: {beer.name}</label>
         <label>Style: {beer.style.name}</label>
         <label>Tasting Notes: {beer.tastingNotes}</label>
-        <span onClick={handleDelete}>delete</span>
+        <button onClick={() => handleRemoveBeerFromMyList(beer._id)}>remove</button>
       </div>
     </ul>
   );

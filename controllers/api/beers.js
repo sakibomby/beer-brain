@@ -6,12 +6,15 @@ module.exports = {
   create,
   addToList,
   getMyBeers,
-  deleteOneBeer
+  removeMyBeer
 };
 
-async function deleteOneBeer(req, res) {
-  const beer = await Beer.findByIdAndRemove({ users: req.user._id });
-  res.json(beer);
+async function removeMyBeer(req, res) {
+  const beer = await Beer.findById(req.params.id);
+  beer.users.remove(req.user._id);
+  await beer.save();
+  const beers = await Beer.find({users: req.user._id});
+  res.json(beers);
 }
 
 
