@@ -5,6 +5,24 @@
     padding: 10px;
     margin: 10px;
     height: 50%;
-    width: 35%;
+    width: 65%;
     display: inline-block;
+}
+
+p {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    color: beige;
+    font-weight:bolder;
+    font-size: 20px;
+}
+
+.labels {
+    color: rgb(2, 60, 73);
+    margin: 0 0 0 20px;
+}
+
+.innercard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

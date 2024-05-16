@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './NewBeerForm.css';
 
 export default function NewBeerForm({ addBeer, styles }) {
     const [newBeer, setNewBeer] = useState({

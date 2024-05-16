@@ -25,6 +25,7 @@ export default function BeerListPage({user}) {
             <h2>Welcome! {user.name}</h2>
             <h1>Beers List</h1>
             <aside>
+                <h2>Styles</h2>
                 <StyleList
                     styles={stylesRef.current}
                     activeStyle={activeStyle}
@@ -36,7 +37,7 @@ export default function BeerListPage({user}) {
                     </button>
                 </Link>
             </aside>
-            <p>Click On Beer To Add To Your List</p>
+            <h2>Click On Beer To Add To Your List</h2>
             <BeerList
         beersList={beersList.filter(beer => beer.style.name === activeStyle)}
       />

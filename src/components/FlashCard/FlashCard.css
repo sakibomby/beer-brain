@@ -16,3 +16,19 @@
     font-size: large;
     font-family: fantasy;
 }
+
+.card-info > p {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-rows: 1fr;
+    color: beige;
+    font-weight:bolder;
+    font-size: 20px;
+    text-align: left;
+}
+
+.labels {
+    color: rgb(2, 60, 73);
+    text-align: left;
+    margin: 0 0 0 20px;
+}

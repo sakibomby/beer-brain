@@ -18,9 +18,9 @@ body {
   font-family: fantasy;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-4);
-  padding: vmin;
-  height: 100vh;
+  background-color: var(--color-5);
+  padding: 0.5vmin;
+  height: 50vh;
 }
 
 code {
@@ -131,7 +131,7 @@ button, a.button {
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
-  width: 120px;
+  width: 130px;
 }
 
 button.btn-sm {
