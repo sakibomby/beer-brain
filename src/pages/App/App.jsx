@@ -8,7 +8,7 @@ import MyBeerListPage from  '../MyBeerListPage/MyBeerListPage';
 import NewBeerPage from '../NewBeerPage/NewBeerPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
-import FlashCardsPage from '../FlashCardPage/FlashCardsPage';
+import FlashCardPage from '../FlashCardPage/FlashCardPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -21,7 +21,7 @@ export default function App() {
         <Routes>
           <Route path="/beers" element={<BeerListPage user={user} />} />
           <Route path="/mybeerlist" element={<MyBeerListPage />} />
-          <Route path="/flashcards" element={<FlashCardsPage />} />
+          <Route path="/flashcards" element={<FlashCardPage />} />
           <Route path="/new-beer" element={<NewBeerPage />} />
           <Route path="/*" element={<Navigate to="/beers" />} />
           <Route />
@@ -31,6 +31,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/auth" element={<AuthPage setUser={setUser} />} />
+          <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
         
       }

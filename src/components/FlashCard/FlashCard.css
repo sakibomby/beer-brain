@@ -4,17 +4,15 @@
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.58);
     padding: 20px;
     margin: 10px;
-    height: 500px;
-    width: 400px;
+    height: 50%;
+    width: 35%;
     display: inline-block;
-    background-color: transparent;
-    perspective: 1000px;
 }
 
-.card-info, .flashcard-front {
+.card-info {
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
-    font-size: x-large;
+    justify-content:space-between;
+    font-size: large;
     font-family: fantasy;
 }

@@ -25,7 +25,7 @@ export default function NewBeerForm({ addBeer, styles }) {
     
     return (
         <>
-            <form onSubmit={handleAddBeer}>
+            <form onSubmit={handleAddBeer} className='newbeerform'>
                 <input
                     name="name"
                     value={newBeer.name}

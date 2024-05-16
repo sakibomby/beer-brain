@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import './AuthPage.css';
 
 export default function AuthPage({ setUser }) {
     const [showSignUp, setShowSignUp] = useState(true);
@@ -10,7 +11,7 @@ export default function AuthPage({ setUser }) {
     };
 
     return (
-        <main>
+        <main className="authpage">
             <h1>Welcome To BeerBrain!</h1>
            {showSignUp ?  <SignUpForm setUser={setUser} /> : <LoginForm setUser={setUser} />}
             <button onClick={handleChange}>

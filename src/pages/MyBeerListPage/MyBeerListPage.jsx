@@ -3,6 +3,9 @@ import * as beersApi from '../../utilities/beers-api';
 import BeerCard from '../../components/BeerCard/BeerCard';
 import { Link } from "react-router-dom";
 import './MyBeerListPage.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function MyBeerListPage() {
     const [myBeers, setMyBeers] = useState([]);
@@ -25,6 +28,14 @@ export default function MyBeerListPage() {
         key={b._id} 
         /> 
     )
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+    };
 
     return (
         <main className="MyBeerListPage">
@@ -32,9 +43,13 @@ export default function MyBeerListPage() {
            <Link to="/flashcards" >
            <button>Flash Cards</button>
            </Link>
-            <ul>
-                <div>{beerCards}</div>
-            </ul>
+            <div>
+                <div>
+                    <Slider {...settings}>
+                        {beerCards}
+                    </Slider>
+                </div>
+            </div>
         </main>
     )
 }

@@ -1,0 +1,10 @@
+.beercard{
+    border: 2px solid hsla(184, 86%, 14%, 0.868);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.58);
+    padding: 10px;
+    margin: 10px;
+    height: 50%;
+    width: 35%;
+    display: inline-block;
+}

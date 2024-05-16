@@ -1,12 +1,12 @@
 :root {
   --white: #FFFFFF;
-  --color-1: #869c92;
-  --color-2: #80a094;
-  --color-3: #5e979c;
-  --color-4: #58888c;
-  --color-5: #3e7070ba;
+  --color-1: #869c92da;
+  --color-2: #80a094e1;
+  --color-3: #5e979cca;
+  --color-4: #58888ce0;
+  --color-5: #3e7070d8;
   --text-light: #45515c;
-  --text-dark: #615954;
+  --text-dark: #252322;
 } 
 
 *, *:before, *:after {
@@ -15,13 +15,11 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: fantasy;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-4);
-  padding: 2vmin;
+  padding: vmin;
   height: 100vh;
 }
 
@@ -90,10 +88,13 @@ p.error-message {
 }
 
 form {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: 2fr;
-  gap: 2vmin;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 500px;
+  padding: 1vmin;
+  margin: auto;
+  gap: 2vmax;
   color: var(--text-light);
 }
 
@@ -103,13 +104,13 @@ label {
   align-items: center;
 }
 
-input {
+input, select {
   padding: 1vmin;
   font-size: 2vmin;
   border: .1vmin solid var(--color-3);
   border-radius: .5vmin;
   color: var(--text-dark);
-  background-image: none !important; /* prevent lastpass */
+  background-image: none !important;
   outline: none;
 }
 
@@ -130,6 +131,7 @@ button, a.button {
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
+  width: 120px;
 }
 
 button.btn-sm {
