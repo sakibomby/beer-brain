@@ -42,7 +42,7 @@ export default function FlashCardPage() {
     return (
         <main className="flashcardpage">
             <h1>Flash Cards</h1>
-            <p>Click Card To Flip</p>
+            <h3>Click Card To Flip</h3>
             <div>
                 <div>
                     <Slider ref={slider => {

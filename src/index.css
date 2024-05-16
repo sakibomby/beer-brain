@@ -131,7 +131,7 @@ button, a.button {
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
-  width: 130px;
+  width: 12%;
 }
 
 button.btn-sm {
