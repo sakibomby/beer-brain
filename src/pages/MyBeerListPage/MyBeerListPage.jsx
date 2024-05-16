@@ -30,7 +30,7 @@ export default function MyBeerListPage() {
         <main className="MyBeerListPage">
             <h1>My Beer List</h1>
            <Link to="/flashcards" >
-           <button>Review Cards</button>
+           <button>Flash Cards</button>
            </Link>
             <ul>
                 <div>{beerCards}</div>
