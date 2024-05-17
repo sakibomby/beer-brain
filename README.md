@@ -92,5 +92,3 @@
 - [::] Add more beers to database.
 
 - [::] Create mobile version.
-
-- [::] Create a like button for posts and comments.
