@@ -50,16 +50,16 @@ export default function FlashCardPage() {
                     }}{...settings}>
                         {flashCards}
                     </Slider>
-                    </div>
-                    <div style={{ textAlign: "center" }}>
-                        <button className="button" onClick={previous}>
-                            Previous
-                        </button>
-                        <button className="button" onClick={next}>
-                            Next
-                        </button>
-                    </div>
                 </div>
+                <div style={{ textAlign: "center" }}>
+                    <button className="button" onClick={previous}>
+                        Previous
+                    </button>
+                    <button className="button" onClick={next}>
+                        Next
+                    </button>
+                </div>
+            </div>
         </main>
     )
 }

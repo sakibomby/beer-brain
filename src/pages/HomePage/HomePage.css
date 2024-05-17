@@ -1,0 +1,11 @@
+.homepage {
+    font-size: 25px;
+    background-image: url(https://img.freepik.com/free-vector/beer-foam-background-horizontally-seamless-pattern_1284-42180.jpg?size=626&ext=jpg&ga=GA1.2.1895770548.1711857392&semt=sph) ;
+    background-size: cover;
+}
+
+.homepage button {
+    width: 15%;
+    height: 100%;
+    font-size: 15px;
+}

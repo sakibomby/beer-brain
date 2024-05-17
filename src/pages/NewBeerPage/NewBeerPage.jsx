@@ -16,14 +16,13 @@ export default function NewBeerPage() {
     }, []);
 
     async function addBeer(beer) {
-        const newBeer = await beersAPI.add( beer );
+        const newBeer = await beersAPI.add(beer);
         setBeers([...beers, newBeer]);
     }
 
     return (
         <main>
-            <h1>Add New Beer</h1>
-           
+            <h1>Add A New Beer</h1>
             <NewBeerForm addBeer={addBeer} styles={styles} />
         </main>
 

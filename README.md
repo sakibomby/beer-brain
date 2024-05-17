@@ -15,15 +15,27 @@
 ## :camera_flash: Screenshots
 
    <h3 align="center">Home Page</h3>  <img
-    src="Screenshots/Home Page.png"
+    src="screenshots/homepage.png"
     width="700"
  
-   <h3 align="center">Posts Page</h3>  <img
-    src="Screenshots/Posts Page.png"
+   <h3 align="center">Sign Up/Login</h3>  <img
+    src="screenshots/signup:login.png"
     width="700"
   
-   <h3 align="center">Show Page</h3>  <img
-    src="Screenshots/Show Page.png"
+   <h3 align="center">Beer List</h3>  <img
+    src="screenshots/beerlist.png"
+    width="700"
+  
+   <h3 align="center">Add A New Beer</h3>  <img
+    src="screenshots/add new beer.png"
+    width="700"
+  
+   <h3 align="center">My Beer List</h3>  <img
+    src="screenshots/my beerlist.png"
+    width="700"
+  
+   <h3 align="center">Flashcards</h3>  <img
+    src="screenshots/flashcards.png"
     width="700"
   
 
@@ -78,3 +90,7 @@
 ## :satellite: Upcoming Features
 
 - [::] Add more beers to database.
+
+- [::] Create mobile version.
+
+- [::] Create a like button for posts and comments.

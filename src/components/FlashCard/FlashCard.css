@@ -21,7 +21,7 @@
     display: grid;
     grid-template-columns: 0.5fr 2fr;
     grid-template-rows: 1fr;
-    color: beige;
+    color: rgb(74, 148, 143);
     font-weight:bolder;
     font-size: 20px;
     text-align: left;

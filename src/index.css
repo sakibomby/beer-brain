@@ -1,10 +1,10 @@
 :root {
   --white: #FFFFFF;
-  --color-1: #869c92da;
-  --color-2: #80a094e1;
-  --color-3: #5e979cca;
-  --color-4: #58888ce0;
-  --color-5: #3e7070d8;
+  --color-1: #869c92ca;
+  --color-2: #80a094d9;
+  --color-3: #5e979cd5;
+  --color-4: #58888ccf;
+  --color-5: #3e7070b4;
   --text-light: #45515c;
   --text-dark: #252322;
 } 
@@ -18,9 +18,11 @@ body {
   font-family: fantasy;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-5);
+  /* background-color: var(--color-5); */
   padding: 0.5vmin;
-  height: 50vh;
+  /* height: 50vh; */
+  background-image: url(https://img.freepik.com/free-vector/beer-foam-background-horizontally-seamless-pattern_1284-42180.jpg?size=626&ext=jpg&ga=GA1.2.1895770548.1711857392&semt=sph);
+  background-size: cover;
 }
 
 code {

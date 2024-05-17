@@ -58,7 +58,7 @@ export default function NewBeerForm({ addBeer, styles }) {
                     required
                 />
 
-                <button type="submit">Add Beer</button>
+                <button className="button" type="submit">Add Beer</button>
             </form>
         </>
     );

@@ -6,30 +6,30 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function BeerList({ beersList }) {
   const beers = beersList.map(beer =>
-      <BeerListBeer
-        key={beer._id}
-        beer={beer}
-        />
-      );
-      
-      const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        swipeToSlide: true,
-    };
+    <BeerListBeer
+      key={beer._id}
+      beer={beer}
+    />
+  );
 
-    return (
-        <>
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+  };
+
+  return (
+    <>
       <main className="BeerList">
         <div>
-        <Slider {...settings}>
-        {beers}
-        </Slider>
+          <Slider {...settings}>
+            {beers}
+          </Slider>
         </div>
       </main>
-        </>
-    );
-  }
+    </>
+  );
+}

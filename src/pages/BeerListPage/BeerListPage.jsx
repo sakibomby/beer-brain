@@ -32,7 +32,7 @@ export default function BeerListPage({user}) {
                     setActiveStyle={setActiveStyle}
                 />
                 <Link to="/new-beer">
-                    <button>
+                    <button className="add-button">
                         <label>Add New Beer</label>
                     </button>
                 </Link>
