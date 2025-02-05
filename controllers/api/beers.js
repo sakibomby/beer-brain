@@ -13,18 +13,18 @@ async function removeMyBeer(req, res) {
   const beer = await Beer.findById(req.params.id);
   beer.users.remove(req.user._id);
   await beer.save();
-  const beers = await Beer.find({users: req.user._id});
+  const beers = await Beer.find({ users: req.user._id });
   res.json(beers);
 }
 
 
 async function getMyBeers(req, res) {
-  const beers = await Beer.find({users: req.user._id}).populate('style');
+  const beers = await Beer.find({ users: req.user._id }).populate('style');
   res.json(beers);
 }
 
-async function addToList(req, res ) {
-const beer = await Beer.findById(req.params.id);
+async function addToList(req, res) {
+  const beer = await Beer.findById(req.params.id);
   if (!beer.users.some((u) => u.equals(req.user._id))) {
     beer.users.push(req.user._id)
   }
